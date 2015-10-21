@@ -30,7 +30,12 @@ Read More: http://stackoverflow.com/questions/7901864/git-conflict-markers
 
 <h2>Github for Windows</h2>
 -
-todo
+Git provides a GUI for windows and other platforms that does the legwork of the commands for you (see below for commands).  This reduces some functionality, but is easier to pick up and is, in most cases, sufficient.
+
+To avoid trying to describe the location of each of these features, I suggest looking up a tutorial of working this GUI (with pictures! :D).
+</br>E.g. https://help.github.com/desktop/
+
+<b>Download:</b> https://desktop.github.com/
 
 <h2>Github Console</h2>
 -
