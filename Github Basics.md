@@ -9,6 +9,7 @@ Merging takes a source branch and syncs changes with a destination branch.  In s
 
 <h2>Github Concepts</h2>
 -
+- <b>Repositories</b> (repos) are cloud storages of projects - this file is stored in our repository, for instance.  They allow branching, merging, etc. to work on the same code with collaborators.
 - <b>Forking</b> creates a copy of a source branch (code) that allows you to work separately from this branch.
 - <b>Branches</b> are instances of a fork. Branches are separate copies of other branches, often the "master" branch.
 - <b>Master</b> branch is the main source of our code.  All work should be done on separate branches, then merged into master branch once finished and tested. This process allows us to roll back code if a fatal error in the code demands it.
@@ -39,11 +40,14 @@ To avoid trying to describe the location of each of these features, I suggest lo
 
 <h2>Github Console</h2>
 -
-todo
+Vanilla git is command line coding of changes.  Each line begins with a 'git', followed by the commands you need to run (commit, fetch, merge, push, etc.).  While not the most intuitive setup, it does allow you to access every feature available in every command. The choice to use the GUI vs Console is a mixture of personal preference and current need, so use whatever you feel led to do.  If you need help, just ask.
 
-<h2>Some Useful Commands</h2>
--
-todo
+<h3>Some Useful Commands</h3>
+=
+<b>NOTE</b> any commands in {} are optional.  See their individual explanations.
+
+- git commit {-a}</br>
+
 
 <h2>Getting Started</h2>
 -
