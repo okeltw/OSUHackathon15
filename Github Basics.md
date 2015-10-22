@@ -1,14 +1,12 @@
 <b>NOTE:</b> This is meant to cover the basics and some commands.
 
 <h1>About Github</h1>
--
 Github is a file and source sharing site that allows multiple developers to collaborate on a single project.
 
 In pursuit of this, Git provides a suite of features that allows us to work separately, afterwards cleanly merge the changes.  This process is known as <i>forking</i>.  Forking a repository creates your own little <i>branch</i> from which to work on.  Each branch has its own copy of the source code, allowing you to work without a collaborator's changes interfering.  Once work completes for a branch, we do what is called a <i>merge</i>.  
 Merging takes a source branch and syncs changes with a destination branch.  In some cases, discrepencies which do not allow clean merges must be resolved. At these points, Git will place simple markups in the code that shows the difference.  The user chooses the code to be kept and deletes the rest.  Afterwards, git will merge the changes such that each branch has the same source.
 
 <h2>Github Concepts</h2>
--
 - <b>Repositories</b> (repos) are cloud storages of projects - this file is stored in our repository, for instance.  They allow branching, merging, etc. to work on the same code with collaborators.
 - <b>Forking</b> creates a copy of a source branch (code) that allows you to work separately from this branch.
 - <b>Branches</b> are instances of a fork. Branches are separate copies of other branches, often the "master" branch.
@@ -31,7 +29,6 @@ Read More: http://stackoverflow.com/questions/7901864/git-conflict-markers
 - <b>gitignore</b> is a file that specifies the file types that will not be tracked, updated, or stored in the repository.  Examples of files that are ignored include executables or files created by compilation, as these files need to be created by the user's compiler.
 
 <h2>Github for Windows</h2>
--
 Git provides a GUI for windows and other platforms that does the legwork of the commands for you (see below for commands).  This reduces some functionality, but is easier to pick up and is, in most cases, sufficient.
 
 To avoid trying to describe the location of each of these features, I suggest looking up a tutorial of working this GUI (with pictures! :D).
@@ -40,11 +37,9 @@ To avoid trying to describe the location of each of these features, I suggest lo
 <b>Download:</b> https://desktop.github.com/
 
 <h2>Github Console</h2>
--
 Vanilla git is command line coding of changes.  Each line begins with a 'git', followed by the commands you need to run (commit, fetch, merge, push, etc.).  While not the most intuitive setup, it does allow you to access every feature available in every command. The choice to use the GUI vs Console is a mixture of personal preference and current need, so use whatever you feel led to do.  If you need help, just ask.
 
 <h3>Some Useful Commands</h3>
-=
 <b>NOTE</b> any commands in {} are optional.  See their individual explanations. Omit the  { } characters in the command line
 
 - git commit {-a}</br>
