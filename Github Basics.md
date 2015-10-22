@@ -28,7 +28,7 @@ Read More: http://stackoverflow.com/questions/7901864/git-conflict-markers
 - <b>Issues</b> are basically TODO's for the projecet.  They include summaries of what should be done and potential psuedocode.  These issues can be assigned to collaborators to efficiently split tasks.  A good practice is to name your branch after an issue (if used) so that collaborators may follow what work you are doing.
 - <b>Pull Requets</b> are requests to merge your code into branches.  We <i>may</i> use this to merge into master, essentially allowing collaborators a chance to test your code for bugs before merging. A good practice may involve one person in charge of accepting/denying these requests to streamline the process.
 - <b>Fast Forward Merging</b> involves merging the destination branch <i>into</i> your local branch.  Here, you resolve conflicts, commit, then push.  This will be noted by Git, which will automatically "fast forward" your merge into destination (seeing as you have already resolved conflicts).
-- <b>gitignore</i> is a file that specifies the file types that will not be tracked, updated, or stored in the repository.  Examples of files that are ignored include executables or files created by compilation, as these files need to be created by the user's compiler.
+- <b>gitignore</b> is a file that specifies the file types that will not be tracked, updated, or stored in the repository.  Examples of files that are ignored include executables or files created by compilation, as these files need to be created by the user's compiler.
 
 <h2>Github for Windows</h2>
 -
