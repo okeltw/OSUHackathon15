@@ -28,6 +28,7 @@ Read More: http://stackoverflow.com/questions/7901864/git-conflict-markers
 - <b>Issues</b> are basically TODO's for the projecet.  They include summaries of what should be done and potential psuedocode.  These issues can be assigned to collaborators to efficiently split tasks.  A good practice is to name your branch after an issue (if used) so that collaborators may follow what work you are doing.
 - <b>Pull Requets</b> are requests to merge your code into branches.  We <i>may</i> use this to merge into master, essentially allowing collaborators a chance to test your code for bugs before merging. A good practice may involve one person in charge of accepting/denying these requests to streamline the process.
 - <b>Fast Forward Merging</b> involves merging the destination branch <i>into</i> your local branch.  Here, you resolve conflicts, commit, then push.  This will be noted by Git, which will automatically "fast forward" your merge into destination (seeing as you have already resolved conflicts).
+- <b>gitignore</i> is a file that specifies the file types that will not be tracked, updated, or stored in the repository.  Examples of files that are ignored include executables or files created by compilation, as these files need to be created by the user's compiler.
 
 <h2>Github for Windows</h2>
 -
@@ -47,7 +48,29 @@ Vanilla git is command line coding of changes.  Each line begins with a 'git', f
 <b>NOTE</b> any commands in {} are optional.  See their individual explanations.
 
 - git commit {-a}</br>
+    - Commits the current branch. </br>
+    - {-a} adds files not currently track and not in the .gitignore.
+- git push {--set-upstream origin <i>target</i>} {origin}
+    - Pushes recent commits to cloud repository.<br>
+    - {--set-upstream origin <i>target</i>} sets the <i>target</i> branch in  the cloud as the origin for this branch's pushes; that is, all pushes will update the <i>target</i> branch. This is only a setup step, run once.<br>
+    - {origin} specifies pushing to the cloud.  
+- git status<br>
+    - provides the status of your branch, including:
+      - How many commits you are in front of the remote branch
+      - Any tracked files that were changed
+      - Any untracked files that can be added with git commit -a, or git add
+- git add <i>file</i>
+    - Adds <i>file</i> to tracked list; any untracked items will not be stored on the cloud.
+      - You may recieve warnings that files are untracked; these warnings provide the commands necessary to add the files.
+      - You must include file extension in the command.
+- git fetch 
+    - fetches the remote branch and updates (overwrites) your local branch with the changes. Useful for updating your local master branch with the remote - used in FF merging.
+- git reset {-hard}
+    - resets local branch with the remote data.
+    - {-hard} completely discards all changes. If you royally screw your branch, you can use this to start fresh.
 
+<b>Note:</b> Again, these are just basic commands to help you get started.  Each command listed has <i>many</i> more commands, but most are not necesary for our purposes.  Also, my explanations are generalizations with some assumptions and are potentially mistated; refer to the git documentation for the full list and official descriptions.
+https://git-scm.com/doc
 
 <h2>Getting Started</h2>
 -
