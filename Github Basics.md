@@ -45,7 +45,7 @@ Vanilla git is command line coding of changes.  Each line begins with a 'git', f
 
 <h3>Some Useful Commands</h3>
 =
-<b>NOTE</b> any commands in {} are optional.  See their individual explanations.
+<b>NOTE</b> any commands in {} are optional.  See their individual explanations. Omit the  { } characters in the command line
 
 - git commit {-a}</br>
     - Commits the current branch. </br>
@@ -68,10 +68,51 @@ Vanilla git is command line coding of changes.  Each line begins with a 'git', f
 - git reset {-hard}
     - resets local branch with the remote data.
     - {-hard} completely discards all changes. If you royally screw your branch, you can use this to start fresh.
+- git checkout {-b} <i>branchname</i>
+    - checks out branch <i>branchname</i>
+    - {-b} creates the branch, then checks it out.  Use this if the branch doesn't yet exist; otherwise, you'll find yourself an error.
 
 <b>Note:</b> Again, these are just basic commands to help you get started.  Each command listed has <i>many</i> more commands, but most are not necesary for our purposes.  Also, my explanations are generalizations with some assumptions and are potentially mistated; refer to the git documentation for the full list and official descriptions.
 https://git-scm.com/doc
 
 <h2>Getting Started</h2>
--
-todo
+To start any project with Github source control, you need to
+1) Set up the repository (which I have done here)
+2) Clone the repository locally (requires git for windows (GfW) or git console, both of which are included in GfW so I recommend downloading this)
+3) Set up branches
+4) Code all the things!
+
+<h3>Setting up a repository</h3>
+<i>Included for interest, those with short attention spans can skip</i>
+
+A repository, as previously stated, is where all of our code will live.  There will be multiple copies - one on the cloud, and one locally for each collaborator.  In order to start the project, we must set up the cloud repo.  Doing so is simple; navigate to your Github profile, hit the + button in the top right corner, "New Repository", name it something useful, adding a README that describes the project is reccommended but not required, and then save.  That's it; you got yourself a repo :)
+
+<h3>Clone the Repository</h3>
+<h4>Git for Windows</h4>
+- Top left corner + button
+- Click "clone" option (<b>NOTE:</b> There is also a create option, so this is also viable instead of the above for setting up a repo)
+- Select the repo name from the list [OSUHackathon15]
+- Click clone
+- Choose where you want the local copy to be stored
+- Git will do the rest :D
+
+<h4>Console</h4>
+<i>You need to have git shell.  This comes with Git for Windows, so DL this and open the Git Shell application.</i>
+
+- Open the repo on the website.
+- On the right hand side, there is a URL in a text box.  Copy this URL.
+- Open git shell. Shell will open at wherever you have your GitHub folder set.
+- If you want to save the repo elsewhere, use the change directory command.
+    - cd, enter, cd <i>path</i>
+    - [E.g] I start at C:\Users\Taylor\Desktop\Documents\GitHub, say I want to put this on Desktop:
+        - cd ../..   <i>pushes me back to C:\Users\Taylor\Desktop</i>
+- enter "git clone ", then paste the URL copied in the second step.
+- Hit enter; git will download the repo, any files, branches, etc.  You are now ready to code!
+
+<b>For both versions, this will set up a file where local copies of the code will be placed.  You will work with the project via VS or similar in this directory.</b>
+
+<h3>Set up branches</h3>
+When you clone a branch, you will land on the master branch. <b>Do not start coding on the master branch!!</b>
+
+Instead, create yourself a branch using the <i>git checkout -b __</i> command, inserting your specific branch name.  This way, your changes are separate from the master branch, and thus we have a safe copy available until we need to pull.
+
