@@ -1,4 +1,8 @@
 <h1>ESRI</h1>
+<h2> General Site </h2>
+https://developers.arcgis.com/en/
+<h2>API for Javascript </h2>
+https://developers.arcgis.com/javascript/
 
 
 <h1>Twitter</h1>
