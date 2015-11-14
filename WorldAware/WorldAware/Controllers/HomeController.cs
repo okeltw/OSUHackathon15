@@ -15,14 +15,28 @@ namespace WorldAware.Controllers
 
         public ActionResult Report()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Report an Incident.";
 
             return View();
         }
 
-        public ActionResult Shelter()
+        public ActionResult ListInc()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "List incidents";
+
+            return View();
+        }
+
+        public ActionResult Find()
+        {
+            ViewBag.Message = "Request shelter.";
+
+            return View();
+        }
+
+        public ActionResult ListShelter()
+        {
+            ViewBag.Message = "List Shelters.";
 
             return View();
         }
