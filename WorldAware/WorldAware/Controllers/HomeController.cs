@@ -13,7 +13,14 @@ namespace WorldAware.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Report()
+        {
+            ViewBag.Message = "Your application description page.";
+
+            return View();
+        }
+
+        public ActionResult Shelter()
         {
             ViewBag.Message = "Your application description page.";
 
