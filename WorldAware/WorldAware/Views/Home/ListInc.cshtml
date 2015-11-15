@@ -26,9 +26,6 @@
     </script>*@
 
     <br/>
-    <br/>
-    @*<button type="button" onclick="hey()">Click Me!</button>*@
-<br />
 <h2>Incidents</h2>
 <p>Incidents that have been reported by users. Around the globe.  In real time.</p>
 <br />
@@ -52,14 +49,13 @@
                 <td>Test</td>
                 <td>Test</td>
             </tr>
-            @if (ViewBag.Incidents != null)
+            @if (ViewBag.Event != null)
             {
-                foreach (WorldAware.Models.Incident incident in ViewBag.Incidents)
-                {
-                    <tr>incident.Event</tr>
-                    <tr>incident.Location</tr>
-                    <tr>incident.Description</tr>
-                }
+                <tr>
+                    <td>@ViewBag.Event</td>
+                    <td>@ViewBag.Location</td>
+                    <td>@ViewBag.Description</td>
+                </tr>
             }
         </tbody>
     </table>

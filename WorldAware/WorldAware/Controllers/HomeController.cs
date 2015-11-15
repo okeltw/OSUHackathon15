@@ -57,29 +57,18 @@ namespace WorldAware.Controllers
         {
 
             // In v1.1, all API calls require authentication
-            var service = new TwitterService(_consumerKey, _consumerSecret);
-            service.AuthenticateWith(_accessToken, _accessTokenSecret);
+            ViewBag.LayoutTag = 1;
 
-            IEnumerable<TwitterStatus> tweets = service.ListTweetsOnHomeTimeline(new ListTweetsOnHomeTimelineOptions());
-            foreach (TwitterStatus tweet in tweets)
-            {
-                ViewBag.Tweet = tweet.Text;
-            }
+            ViewBag.Event = model.Event;
+            ViewBag.Location = model.Location;
+            ViewBag.Description = model.Description;
 
             return ListInc();
         }
 
         public ActionResult ListInc()
         {
-            // In v1.1, all API calls require authentication
-            var service = new TwitterService(_consumerKey, _consumerSecret);
-            service.AuthenticateWith(_accessToken, _accessTokenSecret);
-
-            IEnumerable<TwitterStatus> tweets = service.ListTweetsOnHomeTimeline(new ListTweetsOnHomeTimelineOptions());
-            foreach (TwitterStatus tweet in tweets)
-            {
-                ViewBag.Tweet = tweet.Text;
-            }
+            ViewBag.LayoutTag = 1;
 
             return View();
         }
@@ -95,9 +84,11 @@ namespace WorldAware.Controllers
         [HttpPost]
         public ActionResult ListShelter(Shelter model)
         {
+            ViewBag.LayoutTag = 2;
+
             ViewBag.Name = model.name;
             ViewBag.Location = model.location;
-            ViewBag.Contact = "mailto:" + model.contact;
+            ViewBag.Contact = model.contact;
 
             return View();
         }
@@ -106,7 +97,14 @@ namespace WorldAware.Controllers
         {
             ViewBag.Message = "List Shelters.";
 
+            ViewBag.LayoutTag = 2;
             
+            return View();
+        }
+
+        public ActionResult Contact()
+        {
+            ViewBag.Layout = 0;
             return View();
         }
 

@@ -30,7 +30,7 @@
             <tr style="background-color:lightgrey">
                 <td>Kamari</td>
                 <td>Ohio State University</td>
-                <td><button class="btn-danger btn" onclick="mailto:datsraw@gmail.com">Offer Aid</button></td>
+                <td>@Html.ActionLink("Offer Aid", "Mail", new { @address = "datsraw@gmail.com", @name = "Kamari Wright" }, new { @class = "btn btn-danger" })</td>
                 <td hidden="hidden">datsraw@gmail.com</td>
             </tr>
             @if (ViewBag.Name != null)
@@ -38,7 +38,7 @@
                 <tr>
                     <td>@ViewBag.Name</td>
                     <td>@ViewBag.Location</td>
-                    <td><button class="btn-danger btn" onclick="@ViewBag.Contact">Offer Aid</button></td>
+                    <td>@Html.ActionLink("Offer Aid", "Mail", new { @address = ViewBag.Contact, @name = ViewBag.Name }, new { @class = "btn btn-danger" })</td>
                     <td hidden="hidden">@ViewBag.Contact</td>
                 </tr>
             }
