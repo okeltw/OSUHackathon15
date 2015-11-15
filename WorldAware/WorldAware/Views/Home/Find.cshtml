@@ -1,0 +1,26 @@
+﻿@{
+    ViewBag.Title = "Shelter";
+}
+
+<h2>Seeking Shelter</h2>
+<p>
+    Affected by an incident? Post a request here to search for aid.
+</p>
+<div class="panel-body form-group">
+    <label>Name</label><br />
+    <i>What is your name?</i><br />
+    @Html.TextBox("name", "", new { @class = "form-control" })</span>
+    <br /><br />
+
+    <label>Location</label><br />
+    <i>Where are you located at?</i><br />
+    @Html.TextBox("location", "", new { @class = "form-control" })
+    <br /><br />
+
+    <label>Contact</label><br />
+    <i>Where can you be reached at?</i><br />
+    @Html.TextBox("contact", "", new { @class = "form-control" })
+    <br /><br />
+
+    <button class="btn-primary">Submit</button>
+</div>

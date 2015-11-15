@@ -10,12 +10,38 @@ namespace WorldAware.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.LayoutTag = 0;
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Report()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Report an Incident.";
+            ViewBag.LayoutTag = 1;
+
+            return View();
+        }
+
+        public ActionResult ListInc()
+        {
+            ViewBag.Message = "List incidents";
+            ViewBag.LayoutTag = 1;
+
+            return View();
+        }
+
+        public ActionResult Find()
+        {
+            ViewBag.Message = "Request shelter.";
+            ViewBag.LayoutTag = 2;
+
+            return View();
+        }
+
+        public ActionResult ListShelter()
+        {
+            ViewBag.Message = "List Shelters.";
+            ViewBag.LayoutTag = 3;
 
             return View();
         }
@@ -23,6 +49,7 @@ namespace WorldAware.Controllers
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
+            ViewBag.LayoutTag = 0;
 
             return View();
         }
