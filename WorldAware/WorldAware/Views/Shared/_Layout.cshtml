@@ -4,8 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="http://js.arcgis.com/3.14/esri/css/esri.css" />
+    <script src="http://js.arcgis.com/3.14/"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/mapscript")
 
 </head>
 <body>
@@ -13,7 +17,7 @@
         <div class="container">
             <div class="navbar-header pull-left" >
                 <a href="@Url.Action("Index", "Home")" class="navbar-brand">
-                    <img src="~/Images/WorldAwareLogoRedTransparent.png" height="35%" width="35%" />
+                    <img src="~/Images/WorldAwareLogoRedTransparent.png" height="35%" width="20%" />
                 </a>
             </div>
             <div class="navbar-collapse collapse">

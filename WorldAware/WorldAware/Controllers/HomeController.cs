@@ -14,11 +14,11 @@ namespace WorldAware.Controllers
         public ActionResult Index()
         {
             ViewBag.LayoutTag = 0;
+                        
             return View();
         }
 
         public ActionResult Report()
-<<<<<<< HEAD
         {
             ViewBag.Message = "Report an Incident.";
 
@@ -60,35 +60,6 @@ namespace WorldAware.Controllers
         public ActionResult ListShelter()
         {
             ViewBag.Message = "List Shelters.";
-=======
-        {
-            ViewBag.Message = "Report an Incident.";
-            ViewBag.LayoutTag = 1;
-
-            return View();
-        }
-
-        public ActionResult ListInc()
-        {
-            ViewBag.Message = "List incidents";
-            ViewBag.LayoutTag = 1;
-
-            return View();
-        }
-
-        public ActionResult Find()
-        {
-            ViewBag.Message = "Request shelter.";
-            ViewBag.LayoutTag = 2;
-
-            return View();
-        }
-
-        public ActionResult ListShelter()
-        {
-            ViewBag.Message = "List Shelters.";
-            ViewBag.LayoutTag = 3;
->>>>>>> origin/devDoll
 
             return View();
         }
