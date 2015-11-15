@@ -10,5 +10,11 @@ namespace WorldAware.Models
         public string Event { get; set; }
         public string Location { get; set; }
         public string Description { get; set;  }
+        public GeoCode GeoCode { get; set; }
+
+        public Incident()
+        {
+
+        }
     }
 }
