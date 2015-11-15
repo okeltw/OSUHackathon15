@@ -7,7 +7,7 @@ require(["esri/map",
         "esri/renderers/SimpleRenderer",
         "esri/layers/FeatureLayer",
         "dojo/domReady!"
-], function(Map, SimpleMarkerSymbol, InfoTemplate, Color, SimpleRenderer, FeatureLayer) {
+], function (Map, SimpleMarkerSymbol, InfoTemplate, Color, SimpleRenderer, FeatureLayer) {
     var map = new Map("map", {
         center: [0, 0],
         zoom: 2,
@@ -25,7 +25,7 @@ require(["esri/map",
 
     var point = new SimpleMarkerSymbol();
     point.setSize(14);
-    point.setColor(new Color([207, 34, 30])); //Make Scarlet later
+    point.setColor(new Color([207, 34, 171])); //Make Scarlet later
 
     var infoTemplate = new InfoTemplate("Event:", "${EVENT}", "City:", "${CITY}");
 
