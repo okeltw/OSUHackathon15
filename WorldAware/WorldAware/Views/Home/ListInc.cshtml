@@ -1,24 +1,40 @@
 ﻿
 @{
-    ViewBag.Title = "ListInc";
+    ViewBag.Title = "List of Incidents";
 }
-
+<br />
 <h2>Incidents</h2>
 <p>Incidents that have been reported by users. Around the globe.  In real time.</p>
-
-<table class="form-control">
-    <thead>
-        <tr>
-            <th width="25%">Event</th>
-            <th width="25%">Location</th>
-            <th width="50%">Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>This is an Event</td>
-            <td>It is happening at this location</td>
-            <td>Here's a description</td>
-        </tr>
-    </tbody>
-</table>
+<br />
+<div class="panel-body">
+    <table style="column-width:33%">
+        <thead>
+            <tr style="border-bottom:groove">
+                <th width="25%">Event</th>
+                <th width="35%">Location</th>
+                <th width="40%">Description</th>
+            </tr>
+        </thead>
+        <tbody style="">
+            <tr>
+                <td>Terrorists</td>
+                <td>Paris</td>
+                <td>The Paris area reeled Friday night from a shooting rampage, explosions and mass hostage-taking that President François Hollande called an unprecedented terrorist attack on France.</td>
+            </tr>
+            <tr style="background-color:lightgrey">
+                <td>Kamari</td>
+                <td>Ohio State University</td>
+                <td>He's wrecking shit, yo.</td>
+            </tr>
+            @if (ViewBag.Incidents != null)
+            {
+                foreach (WorldAware.Models.Incident incident in ViewBag.Incidents)
+                {
+                    <tr>incident.Event</tr>
+                    <tr>incident.Location</tr>
+                    <tr>incident.Description</tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
