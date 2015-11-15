@@ -1,14 +1,14 @@
+
 ﻿@model WorldAware.Models.Incident
+
 @{
     ViewBag.Title = "Report";
 }
-
-
-
 <h2>Report an Incident</h2>
 <p>
     Know of an incident? Report it here to warn others of the danger. 
 </p>
+<<<<<<< HEAD
 @using (@Html.BeginForm("ListInc", "Home", FormMethod.Post)){
     <div class="panel-body form-group">
         <label>Event</label><br />
@@ -29,3 +29,25 @@
         <button class="btn-primary" type="submit">Submit</button>
     </div>
 }
+=======
+
+<div>
+    <div class="panel-body form-group">
+        <label>Event</label><br />
+        <i>What is happening?</i><br />
+        @Html.TextBox("eventText", "", new { @class = "form-control" })
+        <br /><br />
+        <label>Location</label><br />
+        <i>Where is it happening at?</i><br />
+        @Html.TextBox("Location", "", new { @class = "form-control" })
+        <br /><br />
+        <label>Description</label><br />
+        <i>Provide a description of the incident.</i><br />
+        @Html.TextBox("Description", "", new { @class = "form-control" })
+        <br /><br />
+
+        <button class="btn-primary">Submit</button>
+    </div>
+    
+</div>
+>>>>>>> origin/devDoll
