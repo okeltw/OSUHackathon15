@@ -25,7 +25,7 @@ require(["esri/map",
 
     var point = new SimpleMarkerSymbol();
     point.setSize(14);
-    point.setColor(new Color([207, 34, 171])); //Make Scarlet later
+    point.setColor(new Color([207, 34, 30])); //Make Scarlet later
 
     var infoTemplate = new InfoTemplate("Event:", "${EVENT}", "City:", "${CITY}");
 
