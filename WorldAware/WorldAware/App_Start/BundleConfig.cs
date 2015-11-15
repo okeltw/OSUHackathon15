@@ -15,7 +15,9 @@ namespace WorldAware
                         "~/Scripts/jquery.validate*"));
 
             bundles.Add(new ScriptBundle("~/bundles/mapscript").Include(
-                        "~/Scripts/Maps/maps.js"));
+                        "~/Scripts/Maps/maps.js",
+                        "~/Scripts/Maps/IncidentCase_1.js"));
+                        
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
