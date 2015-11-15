@@ -40,6 +40,7 @@ namespace WorldAware.Controllers
                 Incidents.Add(inc);
             }
             ViewBag.LayoutTag = 0;
+                        
             return View();
         }
 
@@ -87,7 +88,7 @@ namespace WorldAware.Controllers
         {
             ViewBag.LayoutTag = 2;
             ViewBag.Message = "Request shelter.";
-            
+
             return View();
         }
 
@@ -103,50 +104,9 @@ namespace WorldAware.Controllers
 
         public ActionResult ListShelter()
         {
-            ViewBag.LayoutTag = 2;
+            ViewBag.Message = "List Shelters.";
 
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.LayoutTag = 3;
-            ViewBag.Message = "Your contact page.";
-            ViewBag.LayoutTag = 0;
-
-            return View();
-        }
-
-        /****
-        Twitter API
-        ****/
-        public ActionResult Authorize()
-        {
-            // Retrieve OAuth Request Token
-            TwitterService service = new TwitterService(_consumerKey, _consumerSecret);
-
-            // Callback URL
-            OAuthRequestToken requestToken = service.GetRequestToken("http://localhost:62488/AuthorizeCallback");
-
-            // Redirect to the OAuth Authorization URL
-            Uri uri = service.GetAuthorizationUri(requestToken);
-            return new RedirectResult(uri.ToString(), false /*permanent*/);
-
-        }
-
-        // Registered @ http://dev.twitter.com
-        public ActionResult AuthorizeCallback(string oauth_token, string oauth_verifier)
-        {
-            var requestToken = new OAuthRequestToken { Token = oauth_token };
-
-            // Exchange the Request Token for an Access Token
-            TwitterService service = new TwitterService(_consumerKey, _consumerSecret);
-            OAuthAccessToken accessToken = service.GetAccessToken(requestToken, oauth_verifier);
-
-            // User Authenticates using the Access Token
-            service.AuthenticateWith(accessToken.Token, accessToken.TokenSecret);
-            TwitterUser user = service.VerifyCredentials(new VerifyCredentialsOptions());
-            ViewBag.TwitMessage = "Connected";
+            
             return View();
         }
 
