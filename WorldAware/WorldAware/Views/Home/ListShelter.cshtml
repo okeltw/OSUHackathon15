@@ -3,5 +3,45 @@
     ViewBag.Title = "View";
 }
 
+<vr></vr>
 <h2>View</h2>
 
+<p>People in need.  See someone close by? Offer aid!</p>
+<br />
+
+
+<div class="panel-body">
+    <table width="100%">
+        <thead>
+            <tr style="border-bottom:groove">
+                <th width="25%">Name</th>
+                <th width="35%">Location</th>
+                <th width="40%">Respond</th>
+                <th hidden="hidden">Contact</th>
+            </tr>
+        </thead>
+        <tbody style="">
+            <tr>
+                <td>Kayli</td>
+                <td>Paris</td>
+                <td>@Html.ActionLink("Offer Aid", "Mail", new { @address = "ninefittyem@gmail.com", @name="Kayli Doll" }, new { @class = "btn btn-danger" })</td>
+                <td hidden="hidden">ninefittyem@gmail.com</td>
+            </tr>
+            <tr style="background-color:lightgrey">
+                <td>Kamari</td>
+                <td>Ohio State University</td>
+                <td><button class="btn-danger btn" onclick="mailto:datsraw@gmail.com">Offer Aid</button></td>
+                <td hidden="hidden">datsraw@gmail.com</td>
+            </tr>
+            @if (ViewBag.Name != null)
+            {
+                <tr>
+                    <td>@ViewBag.Name</td>
+                    <td>@ViewBag.Location</td>
+                    <td><button class="btn-danger btn" onclick="@ViewBag.Contact">Offer Aid</button></td>
+                    <td hidden="hidden">@ViewBag.Contact</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

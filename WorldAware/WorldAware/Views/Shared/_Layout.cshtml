@@ -37,7 +37,8 @@
             </div>
         </div>
     </div>
-    <div class="navbar navbar-left">
+
+    <div class="navbar navbar-left" style="width:25%">
         <br />
         <a class="twitter-timeline" href="https://twitter.com/search?q=%22worldawaretwit%22" data-widget-id="665676991618793474">Tweets about "worldawaretwit"</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -45,7 +46,7 @@
 
     </div>
     @if(ViewBag.LayoutTag == 1){
-        <div class="navbar navbar-right">
+        <div class="navbar navbar-right" style="width:25%">
             <br />
             <a class="twitter-timeline" href="https://twitter.com/search?q=%23danger%20%40worldawaretwit" data-widget-id="665658907029839873">Tweets about #danger @@worldawaretwit</a>
             <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
@@ -71,9 +72,9 @@
 
         </div>
     }
-    <div class="container body-content">
-    
-        
+    <div class="container body-content" style="width:50%">
+
+
         @RenderBody()
         <hr />
         <footer>
@@ -81,7 +82,6 @@
             <p>Okel, Wright, Doll, Pavlica</p>
         </footer>
     </div>
-
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

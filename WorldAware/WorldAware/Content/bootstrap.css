@@ -4285,7 +4285,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   }
 }
 
-@media (min-width: 768px) {
+@media {
   .navbar-left {
     float: left !important;
   }
