@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using WorldAware.Models;
 
 namespace WorldAware.Controllers
 {
     public class HomeController : Controller
     {
+        private List<Incident> Incidents;
+
         public ActionResult Index()
         {
             return View();
@@ -20,9 +23,27 @@ namespace WorldAware.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult ListInc(Incident model)
+        {
+            if(Incidents == null)
+            {
+                Incidents = new List<Incident>();
+            }
+
+            Incidents.Add(model);
+
+            return ListInc();
+        }
+
         public ActionResult ListInc()
         {
             ViewBag.Message = "List incidents";
+
+            if (Incidents != null)
+            {
+                ViewBag.Incidents = Incidents;
+            }
 
             return View();
         }

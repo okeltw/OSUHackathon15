@@ -26,6 +26,15 @@
                 <td>Ohio State University</td>
                 <td>He's wrecking shit, yo.</td>
             </tr>
+            @if (ViewBag.Incidents != null)
+            {
+                foreach (WorldAware.Models.Incident incident in ViewBag.Incidents)
+                {
+                    <tr>incident.Event</tr>
+                    <tr>incident.Location</tr>
+                    <tr>incident.Description</tr>
+                }
+            }
         </tbody>
     </table>
 </div>
