@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "Mail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div width="100%">
+    <h2>Mail</h2>
+    <i>For demonstration purposes only.  Actual email function not available in prototype.</i>
+    <br /><br />
+
+    <label>Name:</label>
+    <input value="@ViewBag.Name" disabled="disabled" class="form-control form-control-static" />
+    <br />
+    <label>Email:</label>
+    <input value="@ViewBag.Address" disabled="disabled" class="form-control form-control-static" />
+    <br />
+    <label>Message:</label>
+    <textarea rows="5" class="form-control" width ="100em"></textarea>
+    <br />
+    @Html.ActionLink("Send", "Index", "Home", new { @class = "btn btn-primary" })
+</div>
+
