@@ -18,17 +18,17 @@ namespace WorldAware.Controllers
         }
 
         public ActionResult Report()
-<<<<<<< HEAD
         {
             ViewBag.Message = "Report an Incident.";
-
+            ViewBag.LayoutTag = 1;
             return View();
         }
 
         [HttpPost]
         public ActionResult ListInc(Incident model)
         {
-            if(Incidents == null)
+
+            if (Incidents == null)
             {
                 Incidents = new List<Incident>();
             }
@@ -40,6 +40,8 @@ namespace WorldAware.Controllers
 
         public ActionResult ListInc()
         {
+            ViewBag.LayoutTag = 1;
+
             ViewBag.Message = "List incidents";
 
             if (Incidents != null)
@@ -53,45 +55,16 @@ namespace WorldAware.Controllers
         public ActionResult Find()
         {
             ViewBag.Message = "Request shelter.";
-
-            return View();
-        }
-
-        public ActionResult ListShelter()
-        {
-            ViewBag.Message = "List Shelters.";
-=======
-        {
-            ViewBag.Message = "Report an Incident.";
-            ViewBag.LayoutTag = 1;
-
-            return View();
-        }
-
-        public ActionResult ListInc()
-        {
-            ViewBag.Message = "List incidents";
-            ViewBag.LayoutTag = 1;
-
-            return View();
-        }
-
-        public ActionResult Find()
-        {
-            ViewBag.Message = "Request shelter.";
             ViewBag.LayoutTag = 2;
-
             return View();
         }
 
         public ActionResult ListShelter()
         {
-            ViewBag.Message = "List Shelters.";
             ViewBag.LayoutTag = 3;
->>>>>>> origin/devDoll
-
             return View();
         }
+        
 
         public ActionResult Contact()
         {
