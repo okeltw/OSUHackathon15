@@ -1,15 +1,15 @@
-﻿
-﻿@model WorldAware.Models.Incident
+﻿﻿@model WorldAware.Models.Incident
 
 @{
     ViewBag.Title = "Report";
 }
 <h2>Report an Incident</h2>
 <p>
-    Know of an incident? Report it here to warn others of the danger. 
+    Know of an incident? Report it here to warn others of the danger.
 </p>
-@using (@Html.BeginForm("ListInc", "Home", FormMethod.Post)){
-    <div class="panel-body form-group">
+@using (@Html.BeginForm("ListInc", "Home", FormMethod.Post))
+{
+    <!--<div class="panel-body form-group">
         <label>Event</label><br />
         <i >What is happening?</i><br />
         @Html.TextBoxFor(m => m.Event, "Event", new { @class = "form-control", @style = "width:100%" })
@@ -24,7 +24,8 @@
         <i>Provide a description of the incident.</i><br />
         @Html.TextAreaFor(m => m.Description,  new { @class = "form-control", @style = "width:100%", @rows=5})
         <br /><br />
-    
+
         <button class="btn-primary btn" type="submit">Submit</button>
-    </div>
+    </div>-->
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKLROHEyR80FKnXp4OYO0YZyjr6I_pyhgQTXl-nnoTBM0XTQ/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 }
