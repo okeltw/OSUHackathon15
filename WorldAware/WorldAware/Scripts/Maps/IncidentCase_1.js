@@ -1,5 +1,7 @@
 ﻿var layerDefinition = {
-    "geometryType" : "esriGeometryPolygon",
+    "geometryType": "
+    
+    GeometryPolygon",
     "fields": [{
         "Event": "Attack",
         "Location": "as",

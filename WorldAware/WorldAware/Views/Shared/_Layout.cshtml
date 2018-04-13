@@ -8,13 +8,13 @@
     <script src="http://js.arcgis.com/3.14/"></script>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/mapscript")
+    <link rel="stylesheet"type="text/css" href="~/Content/WorldAware.css"
 
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
-            <div class="navbar-header pull-left" >
+            <div class="navbar-header pull-left">
                 <a href="@Url.Action("Index", "Home")" class="navbar-brand">
                     <img src="~/Images/WorldAwareLogoRedTransparent.png" height="35%" width="35%" />
                 </a>
@@ -40,16 +40,35 @@
             </div>
         </div>
     </div>
-    <div class="navbar navbar-left">
-       
+    
+    <div >
         <br />
         <br />
-        <a class="twitter-timeline" href="https://twitter.com/search?q=%22worldawaretwit%22" data-widget-id="665676991618793474">Tweets about "worldawaretwit"</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        <div class="map-responsive" >
+            <iframe  src="https://www.google.com/maps/d/embed?mid=1uQMiayaIfrRoQVOetFJptulgjrzYHw4N"  width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
 
+        <div class="navbar navbar-left">
+
+            <a class="twitter-timeline" href="https://twitter.com/search?q=%22worldawaretwit%22" data-widget-id="665676991618793474">Tweets about "worldawaretwit"</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+        </div>
 
     </div>
-    @if(ViewBag.LayoutTag == 1){
+    <!--<div navbar navbar-right>
+
+
+
+    <iframe width="600"
+            height="450"
+            frameborder="0" \
+            style="border:0"
+            src="https://www.google.com/maps/d/embed?mid=1uQMiayaIfrRoQVOetFJptulgjrzYHw4N?key=AIzaSyBj24dr8SbsQtnKLiStAAoN_wF39C-wcGg&center=0,0&zoom=0"
+            allowfullscreen></iframe>
+
+    </div>-->
+    @if (ViewBag.LayoutTag == 1)
+    {
         <div class="navbar navbar-right">
             <br />
             <a class="twitter-timeline" href="https://twitter.com/search?q=%23danger%20%40worldawaretwit" data-widget-id="665658907029839873">Tweets about #danger @@worldawaretwit</a>
@@ -57,12 +76,13 @@
 
         </div>
     }
-    else if(ViewBag.LayoutTag == 2){
+    else if (ViewBag.LayoutTag == 2)
+    {
         <br />
         <div class="navbar navbar-right">
-               <br />
+            <br />
             <a class="twitter-timeline" href="https://twitter.com/search?q=%23haveshelter%20%40worldawaretwit" data-widget-id="665658700946874368">Tweets about #haveshelter @@worldawaretwit</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 
         </div>
     }
@@ -70,15 +90,15 @@
     {
         <br />
         <div class="navbar navbar-right">
-            <br/>
+            <br />
             <a class="twitter-timeline" href="https://twitter.com/search?q=%23needshelter%20%40worldawaretwit" data-widget-id="665658907029839873">Tweets about #needshelter @@worldawaretwit</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
 
         </div>
     }
     <div class="container body-content">
-    <br />
-        
+        <br />
+
         @RenderBody()
         <hr />
         <footer>
